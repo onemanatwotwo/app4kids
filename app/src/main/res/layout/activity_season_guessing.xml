@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dyslexic_background">
+
+    <FrameLayout
+        android:id="@+id/bouncyBallsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="402dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:contentDescription="@string/summer_text"
+        android:src="@drawable/summer_image" />
+
+    <EditText
+        android:id="@+id/guessEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="16dp"
+        android:hint="Guess the season"
+        android:textColorHint="@color/dyslexic_text_color"
+        android:textColor="@color/dyslexic_text_color"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guessEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:padding="12dp" />
+
+    <ImageView
+        android:id="@+id/correctFeedbackView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/correct_feedback_image"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/incorrectFeedbackView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/incorrect_feedback_image"
+        android:visibility="gone" />
+
+</RelativeLayout>

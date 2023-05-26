@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">childrenapp</string>
+    <string name="autumn">Autumn</string>
+    <string name="autumn_text">Autumn</string>
+    <string name="next">Next</string>
+    <string name="summer_text">Summer</string>
+    <string name="winter_text">Winter</string>
+    <string name="spring_text">Spring</string>
+    <string name="guess_season_title">Your Turn!</string>
+    <string name="guess_season_message">Guess</string>
+    <string name="winter">Winter</string>
+    <string name="spring">Spring</string>
+    <string name="summer">Summer</string>
+    <string name="correct_guess">Well Done!</string>
+    <string name="incorrect_guess">Incorrect :( Correct season is</string>
+    <string name="guess_result">Result</string>
+    <string name="ok">ok</string>
+</resources>
