@@ -1,5 +1,6 @@
 package com.android.example.childrenapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -20,6 +21,7 @@ public class SeasonGuessingActivity extends AppCompatActivity {
 
     private ImageView imageView;
     private Button submitButton;
+    private Button quitButton; // New quit button
 
     private String[] seasons = {"summer", "winter", "spring", "autumn"};
     private int[] images = {R.drawable.summer_image, R.drawable.winter_image,
@@ -35,6 +37,7 @@ public class SeasonGuessingActivity extends AppCompatActivity {
 
         imageView = findViewById(R.id.imageView);
         submitButton = findViewById(R.id.submitButton);
+        quitButton = findViewById(R.id.quitButton); // Initialize the quit button
 
         displayRandomImage();
 
@@ -42,6 +45,13 @@ public class SeasonGuessingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 checkGuess();
+            }
+        });
+
+        quitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startAnotherActivity();
             }
         });
     }
@@ -60,29 +70,7 @@ public class SeasonGuessingActivity extends AppCompatActivity {
             correctFeedbackView.setVisibility(View.VISIBLE);
             Animation correctAnimation = AnimationUtils.loadAnimation(this, R.anim.correct_animation);
             correctFeedbackView.startAnimation(correctAnimation);
-            // Add a bouncy ball to the screen
-            ImageView bouncyBall = new ImageView(this);
-            bouncyBall.setImageResource(R.drawable.bouncy_ball);
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
-                    FrameLayout.LayoutParams.WRAP_CONTENT,
-                    FrameLayout.LayoutParams.WRAP_CONTENT
-            );
-            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
-            bouncyBall.setLayoutParams(params);
-            ((FrameLayout) findViewById(R.id.bouncyBallsContainer)).addView(bouncyBall);
-            bouncyBall.setVisibility(View.VISIBLE);
-            // Apply animation to the bouncy ball
-            TranslateAnimation animation = new TranslateAnimation(
-                    Animation.RELATIVE_TO_PARENT, 0f,
-                    Animation.RELATIVE_TO_PARENT, 0f,
-                    Animation.RELATIVE_TO_PARENT, -1f,
-                    Animation.RELATIVE_TO_PARENT, 0.5f
-            );
-            animation.setDuration(10000);
-            animation.setFillAfter(true);
-            bouncyBall.startAnimation(animation);
-        }
-        else {
+        } else {
             View incorrectFeedbackView = findViewById(R.id.incorrectFeedbackView);
             incorrectFeedbackView.setVisibility(View.VISIBLE);
             Animation incorrectAnimation = AnimationUtils.loadAnimation(this, R.anim.incorrect_animation);
@@ -91,5 +79,9 @@ public class SeasonGuessingActivity extends AppCompatActivity {
 
         displayRandomImage();
     }
-}
 
+    private void startAnotherActivity() {
+        Intent intent = new Intent(this, GamesMenu.class);
+        startActivity(intent);
+    }
+}

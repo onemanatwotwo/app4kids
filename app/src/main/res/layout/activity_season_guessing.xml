@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
         android:layout_marginTop="16dp"
-        android:hint="Guess the season"
+        android:hint="@string/guess_the_season"
         android:textColorHint="@color/dyslexic_text_color"
         android:textColor="@color/dyslexic_text_color"
         android:background="@drawable/edittext_background"
@@ -39,10 +39,18 @@
         android:layout_below="@id/guessEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Submit"
+        android:text="@string/submit"
         android:textColor="@color/white"
         android:background="@drawable/button_background"
         android:padding="12dp" />
+    <Button
+        android:id="@+id/quitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/main_menu" />
 
     <ImageView
         android:id="@+id/correctFeedbackView"

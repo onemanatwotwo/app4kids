@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Çocuk Uygulaması</string>
+    <string name="autumn">Sonbahar</string>
+    <string name="autumn_text">Sonbahar</string>
+    <string name="next">Sonraki</string>
+    <string name="summer_text">Yaz</string>
+    <string name="winter_text">Kış</string>
+    <string name="spring_text">İlkbahar</string>
+    <string name="guess_season_title">Sıra Sende!</string>
+    <string name="guess_season_message">Tahmin et</string>
+    <string name="winter">Kış</string>
+    <string name="spring">İlkbahar</string>
+    <string name="summer">Yaz</string>
+    <string name="correct_guess">Aferin!</string>
+    <string name="incorrect_guess">Üzgünüm :( doğru cevap:</string>
+    <string name="guess_result">Sonuç</string>
+    <string name="ok">Tamam</string>
+    <string name="correct">Doğru!</string>
+    <string name="questionDay">Bu günden sonraki gün</string>
+    <string name="questionMonth">Bu aydan sonraki ay</string>
+    <string name="incorrect">"Yanlış "</string>
+    <string name="incorrect_dayis">Yanlış. Doğru gün şu iki harf ile başlıyor</string>
+    <string name="hintDay">İpucu: Aradığımız gün bu harfler ile başlıyor </string>
+    <string name="incorrect_monthis">Yanlış. Doğru cevap:</string>
+    <string name="hintMonth">İpucu: Aradığımız ay bu harfler ile başlıyor</string>
+    <string name="welldone">Tebrikler!</string>
+    <string name="tryagain">Tekrar dene.</string>
+    <string name="enter_your_answer">Cevabını yaz</string>
+    <string name="submit">Cevabı gönder</string>
+    <string name="enter_the_digits">Rakamları gir</string>
+    <string name="play_forward">Sırayla oyna</string>
+    <string name="play_reverse">Ters sırayla oyna</string>
+    <string name="guess_the_season">Mevisimi tahmin et</string>
+    <string name="main_menu">Ana Menü</string>
+    <string name="randomMonth" />
+    <string name="generate_random_numbers">Başka Sayılarla Dene</string>
+    <string name="number_2">Sayı 2:</string>
+    <string name="number_1">Sayı 1:</string>
+    <string name="multiplication">Çarpma İşlemi</string>
+</resources>

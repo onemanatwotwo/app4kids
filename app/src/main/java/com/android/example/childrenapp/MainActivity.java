@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 if(seasonTracker<4)
                     setSeason();
                 else{
-                    Intent intent = new Intent(MainActivity.this, SeasonGuessingActivity.class);
+                    Intent intent = new Intent(MainActivity.this, MainMenu.class);
                     startActivity(intent);
                 }
             }

@@ -5,6 +5,7 @@
     android:background="@color/dyslexic_background"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/seasonImageView"
         android:layout_width="match_parent"
@@ -24,23 +25,11 @@
         android:textColor="@color/dyslexic_text_color"
         android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/nextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/seasonTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:text="@string/next"
-        android:textColor="@color/white"
-        android:background="@drawable/button_background"
-        android:padding="12dp" />
 
     <LinearLayout
         android:id="@+id/guessLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/nextButton"
         android:layout_marginTop="24dp"
         android:orientation="horizontal"
         android:visibility="gone">
