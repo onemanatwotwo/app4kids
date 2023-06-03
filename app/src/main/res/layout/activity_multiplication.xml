@@ -99,16 +99,6 @@
             android:textColor="#000000" />
 
         <Button
-            android:id="@+id/multiplyButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/generate_random_numbers"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:background="#009688"
-            android:layout_marginTop="16dp" />
-
-        <Button
             android:id="@+id/checkButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -117,6 +107,15 @@
             android:textColor="#ffffff"
             android:background="#009688"
             android:layout_marginTop="8dp" />
+        <Button
+            android:id="@+id/quitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_menu"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="#009688"
+            android:layout_marginTop="16dp" />
 
         <TextView
             android:id="@+id/resultTextView"

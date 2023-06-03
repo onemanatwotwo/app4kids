@@ -1,22 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dyslexic_background">
-
-    <FrameLayout
-        android:id="@+id/bouncyBallsContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/seasons_background">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="402dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1dp"
         android:contentDescription="@string/summer_text"
         android:src="@drawable/summer_image" />
 
@@ -25,12 +20,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
-        android:layout_marginTop="16dp"
-        android:hint="@string/guess_the_season"
-        android:textColorHint="@color/dyslexic_text_color"
-        android:textColor="@color/dyslexic_text_color"
+        android:layout_marginTop="-25dp"
         android:background="@drawable/edittext_background"
-        android:padding="12dp" />
+        android:hint="@string/guess_the_season"
+        android:padding="12dp"
+        android:textColor="@color/dyslexic_text_color"
+        android:textColorHint="@color/dyslexic_text_color"
+        android:inputType="text"/>
 
     <Button
         android:id="@+id/submitButton"
@@ -43,27 +39,38 @@
         android:textColor="@color/white"
         android:background="@drawable/button_background"
         android:padding="12dp" />
+
     <Button
         android:id="@+id/quitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/submitButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
         android:text="@string/main_menu" />
 
-    <ImageView
-        android:id="@+id/correctFeedbackView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/correct_feedback_image"
-        android:visibility="gone" />
 
-    <ImageView
-        android:id="@+id/incorrectFeedbackView"
-        android:layout_width="wrap_content"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/incorrect_feedback_image"
-        android:visibility="gone" />
+        android:layout_below="@id/quitButton"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        app:lottie_rawRes="@raw/star_blast"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
 
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/incorrectView"
+        android:layout_width="259dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/quitButton"
+        android:layout_marginTop="25dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/incorrect"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

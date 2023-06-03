@@ -29,7 +29,7 @@ public class BallView extends SurfaceView implements Runnable {
 
         // Set initial ball position
         ballX = ballRadius;
-        ballY = screenHeight / 2;
+        ballY = 0;
     }
 
     @Override

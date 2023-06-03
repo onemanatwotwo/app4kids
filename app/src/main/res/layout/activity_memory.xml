@@ -5,38 +5,42 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/memory_background">
 
     <TextView
         android:id="@+id/digitTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginBottom="32dp"
         tools:text="1" />
 
     <EditText
         android:id="@+id/inputEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:hint="@string/enter_the_digits"
-        android:inputType="number"
-        android:layout_marginBottom="16dp" />
+        android:inputType="number" />
 
     <Button
         android:id="@+id/submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="@string/submit" />
+        android:text="@string/submit"
+
+        />
 
     <Button
         android:id="@+id/forwardButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="@string/play_forward" />
+        android:text="@string/play_forward"
+        />
 
     <Button
         android:id="@+id/reverseButton"

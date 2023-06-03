@@ -31,11 +31,48 @@
     <string name="enter_the_digits">Rakamları gir</string>
     <string name="play_forward">Sırayla oyna</string>
     <string name="play_reverse">Ters sırayla oyna</string>
-    <string name="guess_the_season">Mevisimi tahmin et</string>
+    <string name="guess_the_season">Mevsimi tahmin et</string>
     <string name="main_menu">Ana Menü</string>
     <string name="randomMonth" />
     <string name="generate_random_numbers">Başka Sayılarla Dene</string>
     <string name="number_2">Sayı 2:</string>
     <string name="number_1">Sayı 1:</string>
     <string name="multiplication">Çarpma İşlemi</string>
+    <string name="Seasons">Mevsimler</string>
+    <string name="Memory">Hafıza Oyunu</string>
+    <string name="DaysMonths">Günler ve Aylar</string>
+    <string name="Eyes">Okuma Egzersizi</string>
+    <string name="Multiplying">Çarpma</string>
+    <string name="backtomenu">Menüye Dön</string>
+    <string name="play">Oyna!</string>
+    <string name="learn">Öğren!</string>
+    <string-array name="daysOfWeek">
+        <item>Pazar</item>
+        <item>Pazartesi</item>
+        <item>Salı</item>
+        <item>Çarşamba</item>
+        <item>Perşembe</item>
+        <item>Cuma</item>
+        <item>Cumartesi</item>
+    </string-array>
+    <string-array name="monthsOfYear">
+        <item>Ocak</item>
+        <item>Şubat</item>
+        <item>Mart</item>
+        <item>Nisan</item>
+        <item>Mayıs</item>
+        <item>Haziran</item>
+        <item>Temmuz</item>
+        <item>Ağustos</item>
+        <item>Eylül</item>
+        <item>Ekim</item>
+        <item>Kasım</item>
+        <item>Aralık</item>
+    </string-array>
+    <string-array name="seasons">
+        <item>kış</item>
+        <item>sonbahar</item>
+        <item>yaz</item>
+        <item>ilkbahar</item>
+    </string-array>
 </resources>

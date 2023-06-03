@@ -1,7 +1,10 @@
 package com.android.example.childrenapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -16,23 +19,25 @@ public class MultiplicationActivity extends AppCompatActivity {
     private TextView num2TextView;
     private TextView resultTextView;
     private EditText answerEditText;
-    private Button multiplyButton;
+    private Button quitButton;
     private Button checkButton;
 
     private int num1;
     private int num2;
     private int correctAnswer;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiplication);
 
+        Animation animation= AnimationUtils.loadAnimation(this,R.anim.button_animation);
         num1TextView = findViewById(R.id.num1TextView);
         num2TextView = findViewById(R.id.num2TextView);
         resultTextView = findViewById(R.id.resultTextView);
         answerEditText = findViewById(R.id.answerEditText);
-        multiplyButton = findViewById(R.id.multiplyButton);
+        quitButton = findViewById(R.id.quitButton);
         checkButton = findViewById(R.id.checkButton);
 
         if (savedInstanceState != null) {
@@ -50,18 +55,20 @@ public class MultiplicationActivity extends AppCompatActivity {
             generateRandomNumbers();
         }
 
-        multiplyButton.setOnClickListener(new View.OnClickListener() {
+        quitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                generateRandomNumbers();
-                answerEditText.setText("");
-                resultTextView.setText("");
+                quitButton.startAnimation(animation);
+                Intent intent = new Intent(MultiplicationActivity.this, GamesMenu.class);
+                startActivity(intent);
             }
         });
 
         checkButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                checkButton.startAnimation(animation);
                 checkAnswer();
             }
         });
@@ -80,7 +87,7 @@ public class MultiplicationActivity extends AppCompatActivity {
 
     private void generateRandomNumbers() {
         Random random = new Random();
-        num1 = random.nextInt(9) + 1; // Generate random number between 1 and 9
+        num1 = random.nextInt(9) + 1;
         num2 = random.nextInt(9) + 1;
         correctAnswer = num1 * num2;
 

@@ -1,29 +1,50 @@
-<!-- main_menu.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <Button
-        android:id="@+id/learnButton"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_centerInParent="true"
-        android:text="Learn!"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:background="@drawable/rounded_button"
-        android:textColor="#FFFFFF" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/incorrectView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="7dp"
+        android:visibility="visible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ballons" />
 
     <Button
         android:id="@+id/playButton"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_below="@id/learnButton"
-        android:layout_centerHorizontal="true"
-        android:text="Play!"
+        android:layout_width="379dp"
+        android:layout_height="149dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/play"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
+        android:fontFamily="@font/comfort"/>
+
+    <Button
+        android:id="@+id/learnButton"
+        android:layout_width="395dp"
+        android:layout_height="143dp"
+        android:layout_above="@id/playButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="396dp"
         android:background="@drawable/rounded_button"
-        android:textColor="#FFFFFF" />
+        android:text="@string/learn"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/comfort"/>
 
 </RelativeLayout>

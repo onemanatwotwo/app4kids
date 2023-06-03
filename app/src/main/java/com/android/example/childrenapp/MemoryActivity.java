@@ -1,9 +1,13 @@
 package com.android.example.childrenapp;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -27,10 +31,12 @@ public class MemoryActivity extends AppCompatActivity {
     private boolean isShowingForward;
     private int currentIndex;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memory);
+        Animation animation= AnimationUtils.loadAnimation(this,R.anim.button_animation);
 
         digitTextView = findViewById(R.id.digitTextView);
         inputEditText = findViewById(R.id.inputEditText);
@@ -43,11 +49,17 @@ public class MemoryActivity extends AppCompatActivity {
 
         reverseDigitList = generateRandomDigitList();
         forwardDigitList = generateRandomDigitList();
-
         Button submitButton = findViewById(R.id.submitButton);
+        submitButton.setBackgroundColor(getResources().getColor(R.color.memoryback));
+        submitButton.setTextColor(Color.BLACK);
+        forwardButton.setBackgroundColor(getResources().getColor(R.color.memoryback));
+        forwardButton.setTextColor(Color.BLACK);
+        reverseButton.setBackgroundColor(getResources().getColor(R.color.memoryback));
+        reverseButton.setTextColor(Color.BLACK);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                submitButton.startAnimation(animation);
                 String userInput = inputEditText.getText().toString().trim();
                 try {
                     checkInput(isShowingForward ? forwardDigitList : reverseDigitList, userInput);
@@ -62,8 +74,10 @@ public class MemoryActivity extends AppCompatActivity {
         });
 
         forwardButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                forwardButton.startAnimation(animation);
                 forwardButton.setEnabled(false);
                 reverseButton.setEnabled(false);
                 inputEditText.setText("");
@@ -75,6 +89,7 @@ public class MemoryActivity extends AppCompatActivity {
         reverseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                reverseButton.startAnimation(animation);
                 forwardButton.setEnabled(false);
                 reverseButton.setEnabled(false);
                 inputEditText.setText("");
@@ -115,7 +130,7 @@ public class MemoryActivity extends AppCompatActivity {
     private void checkInput(List<Integer> digits, String userInput) throws InterruptedException {
         if(isShowingForward){
             String temp="";
-            for (int i=0;i<4;i++){
+            for (int i=0;i<3;i++){
             temp=temp+(digits.get(i));
             }
             if(temp.equals(userInput)) {
@@ -129,7 +144,7 @@ public class MemoryActivity extends AppCompatActivity {
         }
         else{
             String temp="";
-            for (int i=3;i>=0;i--){
+            for (int i=2;i>=0;i--){
                 temp=temp+(digits.get(i));
             }
             if(temp.equals(userInput)) {
@@ -153,7 +168,7 @@ public class MemoryActivity extends AppCompatActivity {
         List<Integer> digitList = new ArrayList<>();
         Random random = new Random();
         int temp;
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i <3; i++) {
             temp=random.nextInt(10);
             if(!digitList.contains(temp))
                 digitList.add(temp);
@@ -162,5 +177,7 @@ public class MemoryActivity extends AppCompatActivity {
         }
         return digitList;
     }
+
 }
+
 

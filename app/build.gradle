@@ -5,6 +5,7 @@ plugins {
 android {
     namespace 'com.android.example.childrenapp'
     compileSdk 33
+    compileOptions.encoding = 'ISO-8859-1'
 
     defaultConfig {
         applicationId "com.android.example.childrenapp"
@@ -36,4 +37,5 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation group: 'com.airbnb.android', name: 'lottie', version: '6.0.0'
 }
