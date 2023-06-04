@@ -27,7 +27,7 @@ public class BallView extends SurfaceView implements Runnable {
 
         // Set up the ball paint
         ballPaint = new Paint();
-        ballPaint.setColor(Color.RED);
+        ballPaint.setColor(Color.BLACK);
 
         // Set initial ball position
         ballX = ballRadius;

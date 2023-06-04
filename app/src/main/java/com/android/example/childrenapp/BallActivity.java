@@ -28,7 +28,7 @@ public class BallActivity extends Activity {
         Point size = new Point();
         display.getSize(size);
         screenWidth = size.x;
-        screenHeight = size.y;
+        screenHeight = 1700;
 
         // Create the ball view
         ballView = new BallView(this, screenWidth, screenHeight);

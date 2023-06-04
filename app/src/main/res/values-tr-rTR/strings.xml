@@ -17,10 +17,10 @@
     <string name="guess_result">Sonuç</string>
     <string name="ok">Tamam</string>
     <string name="correct">Doğru!</string>
-    <string name="questionDay">Bu günden sonraki gün</string>
-    <string name="questionMonth">Bu aydan sonraki ay</string>
+    <string name="questionDay">Bu günden sonra hangi gün gelir: </string>
+    <string name="questionMonth">Bu aydan sonra hangi ay gelir: </string>
     <string name="incorrect">"Yanlış "</string>
-    <string name="incorrect_dayis">Yanlış. Doğru gün şu iki harf ile başlıyor</string>
+    <string name="incorrect_dayis">Yanlış. Doğru gün şu iki harf ile başlıyor </string>
     <string name="hintDay">İpucu: Aradığımız gün bu harfler ile başlıyor </string>
     <string name="incorrect_monthis">Yanlış. Doğru cevap:</string>
     <string name="hintMonth">İpucu: Aradığımız ay bu harfler ile başlıyor</string>

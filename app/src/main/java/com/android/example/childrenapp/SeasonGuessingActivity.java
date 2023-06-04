@@ -3,6 +3,7 @@ package com.android.example.childrenapp;
 import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -23,7 +24,7 @@ public class SeasonGuessingActivity extends AppCompatActivity {
 
     private ImageView imageView;
     private Button submitButton;
-    private Button quitButton;
+    private ImageView quitButton;
     private Animation fadein;
     private EditText guessEdit;
 
@@ -44,10 +45,11 @@ public class SeasonGuessingActivity extends AppCompatActivity {
 
         imageView = findViewById(R.id.imageView);
         submitButton = findViewById(R.id.submitButton);
-        quitButton = findViewById(R.id.quitButton); // Initialize the quit button
+        quitButton = findViewById(R.id.backImage); // Initialize the quit button
 
 
         displayRandomImage();
+        submitButton.setBackgroundColor(getResources().getColor(R.color.seasons));
 
         submitButton.setOnClickListener(new View.OnClickListener() {
 

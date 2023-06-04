@@ -17,12 +17,12 @@
     <string name="ok">ok</string>
     <string name="correct">Correct!</string>
     <string name="questionDay">What day comes after </string>
-    <string name="questionMonth">What month comes after</string>
+    <string name="questionMonth">What month comes after </string>
     <string name="incorrect">"Incorrect "</string>
-    <string name="incorrect_dayis">Incorrect. The correct day is</string>
-    <string name="hintDay">Hint: The correct day starts with</string>
-    <string name="incorrect_monthis">Incorrect. The correct month is</string>
-    <string name="hintMonth">Hint: The correct month starts with</string>
+    <string name="incorrect_dayis">Incorrect. The correct day is </string>
+    <string name="hintDay">Hint: The correct day starts with </string>
+    <string name="incorrect_monthis">Incorrect. The correct month is </string>
+    <string name="hintMonth">Hint: The correct month starts with </string>
     <string name="welldone">Well done!</string>
     <string name="tryagain">Try again.</string>
     <string name="enter_your_answer">Enter your answer</string>
