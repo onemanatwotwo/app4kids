@@ -1,6 +1,7 @@
 package com.android.example.childrenapp;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,6 +11,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +29,7 @@ public class MemoryActivity extends AppCompatActivity {
     private EditText inputEditText;
     private Button forwardButton;
     private Button reverseButton;
+    private ImageView backButton;
     private List<Integer> forwardDigitList;
     private List<Integer> reverseDigitList;
     private boolean isShowingForward;
@@ -36,12 +40,13 @@ public class MemoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memory);
-        Animation animation= AnimationUtils.loadAnimation(this,R.anim.button_animation);
+
 
         digitTextView = findViewById(R.id.digitTextView);
         inputEditText = findViewById(R.id.inputEditText);
         forwardButton = findViewById(R.id.forwardButton);
         reverseButton = findViewById(R.id.reverseButton);
+        backButton = findViewById(R.id.backImage);
 
         forwardDigitList = new ArrayList<>();
         reverseDigitList = new ArrayList<>();
@@ -56,9 +61,18 @@ public class MemoryActivity extends AppCompatActivity {
         forwardButton.setTextColor(Color.BLACK);
         reverseButton.setBackgroundColor(getResources().getColor(R.color.memoryback));
         reverseButton.setTextColor(Color.BLACK);
-        submitButton.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MemoryActivity.this, GamesMenu.class);
+                startActivity(intent);
+            }
+        });
+        submitButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Animation animation= AnimationUtils.loadAnimation(MemoryActivity.this,R.anim.button_animation);
                 submitButton.startAnimation(animation);
                 String userInput = inputEditText.getText().toString().trim();
                 try {
@@ -77,6 +91,7 @@ public class MemoryActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                Animation animation= AnimationUtils.loadAnimation(MemoryActivity.this,R.anim.button_animation);
                 forwardButton.startAnimation(animation);
                 forwardButton.setEnabled(false);
                 reverseButton.setEnabled(false);
@@ -89,6 +104,7 @@ public class MemoryActivity extends AppCompatActivity {
         reverseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Animation animation= AnimationUtils.loadAnimation(MemoryActivity.this,R.anim.button_animation);
                 reverseButton.startAnimation(animation);
                 forwardButton.setEnabled(false);
                 reverseButton.setEnabled(false);

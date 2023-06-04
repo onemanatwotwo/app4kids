@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:gravity="bottom"
     android:padding="16dp"
     android:background="@drawable/memory_background">
 
@@ -12,40 +12,61 @@
         android:id="@+id/digitTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:textSize="24sp"
+        android:layout_marginTop="30dp"
+        android:textSize="48sp"
         android:textStyle="bold"
-        tools:text="1" />
+        tools:text="1"
+        android:layout_gravity="center"/>
 
     <EditText
         android:id="@+id/inputEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/comfort"
         android:hint="@string/enter_the_digits"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/comfort"
         android:text="@string/submit"
-
-        />
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/forwardButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
         android:text="@string/play_forward"
-        />
+        android:textSize="36sp"
+        android:fontFamily="@font/comfort" />
 
     <Button
         android:id="@+id/reverseButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/play_reverse" />
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/comfort"
+        android:text="@string/play_reverse"
+        android:textSize="36sp" />
+
+    <ImageView
+        android:id="@+id/backImage"
+        android:layout_width="67dp"
+        android:layout_height="213dp"
+        android:layout_gravity="start"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:contentDescription="@string/backtomenu"
+        android:focusable="true"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/back_icon" />
 
 </LinearLayout>

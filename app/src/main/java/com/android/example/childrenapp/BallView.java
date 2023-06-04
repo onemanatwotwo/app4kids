@@ -3,6 +3,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
@@ -23,6 +24,7 @@ public class BallView extends SurfaceView implements Runnable {
         this.screenWidth = screenWidth;
         this.screenHeight = screenHeight;
 
+
         // Set up the ball paint
         ballPaint = new Paint();
         ballPaint.setColor(Color.RED);
@@ -40,8 +42,10 @@ public class BallView extends SurfaceView implements Runnable {
             }
 
             Canvas canvas = getHolder().lockCanvas();
-            canvas.drawColor(Color.WHITE);
+            int color=getResources().getColor(R.color.blue);
+            canvas.drawColor(color);
             canvas.drawCircle(ballX, ballY, ballRadius, ballPaint);
+
             getHolder().unlockCanvasAndPost(canvas);
 
             // Update ball position
@@ -51,16 +55,16 @@ public class BallView extends SurfaceView implements Runnable {
             // Reverse ball direction if it hits the screen edges
             if (ballX > screenWidth - ballRadius || ballX < ballRadius) {
                 ballSpeedX *= -1;
-                if(ballX > screenWidth - ballRadius)
+                if (ballX > screenWidth - ballRadius)
                     ballSpeedY = (float) (Math.tan(Math.toRadians(-10)) * ballSpeedX);
-                if(ballX < ballRadius)
-                    ballSpeedY=0;
+                if (ballX < ballRadius)
+                    ballSpeedY = 0;
             }
             if (ballY > screenHeight - ballRadius || ballY < ballRadius) {
-                ballX=50;
-                ballY=50;
-                ballSpeedY=0;
-                ballSpeedX=10;
+                ballX = 50;
+                ballY = 50;
+                ballSpeedY = 0;
+                ballSpeedX = 10;
             }
 
             // Delay for smooth animation
