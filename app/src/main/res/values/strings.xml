@@ -26,12 +26,12 @@
     <string name="welldone">Well done!</string>
     <string name="tryagain">Try again.</string>
     <string name="enter_your_answer">Enter your answer</string>
-    <string name="submit">Submit</string>
+    <string name="submit">SUBMIT</string>
     <string name="enter_the_digits">Enter the digits</string>
     <string name="play_forward">Play Forward</string>
     <string name="play_reverse">Play Reverse</string>
     <string name="guess_the_season">Guess the season</string>
-    <string name="main_menu">Main Menu</string>
+    <string name="main_menu">MAIN MENU</string>
     <string name="randomMonth" />
     <string name="generate_random_numbers">Generate Random Numbers</string>
     <string name="number_2">Number 2:</string>
@@ -45,6 +45,21 @@
     <string name="backtomenu">Back to menu</string>
     <string name="play">Play!</string>
     <string name="learn">Learn!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="signup">SIGNUP</string>
+    <string name="loginsucc">LOGIN succesful</string>
+    <string name="loginunsucc">Invalid username or password</string>
+    <string name="signsucc">Signup successful</string>
+    <string name="signunsucc">Username already exists</string>
+    <string name="enteruspas">Please enter username and password</string>
+    <string name="summer_learn">Summer is a season when the weather gets warm and the days are longer. It\'s a time for swimming, playing outside, and enjoying activities like picnics and ice cream.</string>
+    <string name="winter_learn">Winter is a cold season when it snows, and we can play outside in the snow. We wear warm clothes and celebrate holidays like Christmas and New Year\'s Eve during this time.</string>
+    <string name="spring_learn">Spring is a season when the weather gets warmer, and flowers start to grow. It\'s a time for new life, where animals wake up from their winter sleep, and we can have fun playing outside.\n</string>
+    <string name="autumn_learn">Autumn is a season when the weather gets cooler, and the leaves on the trees turn beautiful colors and fall to the ground. It\'s a time for picking fruits and vegetables and playing in piles of leaves.\n</string>
+    <string name="daysmonthslearn">A calendar helps us know what day it is and plan our activities. Days make up a week, like Sunday, Monday, Tuesday, and so on. Weeks make up months, and each month has a name, like January, February, March, and so on. Months help us organize time throughout the year. A year is made up of 12 months and tells us how long it takes for the Earth to go around the sun. So, the calendar helps us keep track of days, weeks, months, and years, and it helps us remember important dates.</string>
+    <string name="multlearn">A multiplication table is a special chart that helps us quickly find the answers to multiplication problems. It shows how numbers are multiplied together. By using the table, we can easily find the answer by looking at the numbers\' row and column intersection. It\'s like a handy tool that makes multiplication easier to understand and solve.</string>
     <string-array name="daysOfWeek">
         <item>Sunday</item>
         <item>Monday</item>

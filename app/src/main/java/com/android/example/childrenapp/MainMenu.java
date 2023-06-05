@@ -39,8 +39,8 @@ public class MainMenu extends AppCompatActivity {
         learnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle Learn button click
-                // Add your code here to navigate to the Learn activity or fragment
+                Intent intent = new Intent(MainMenu.this, Learn.class);
+                startActivity(intent);
             }
         });
 

@@ -5,11 +5,25 @@
 
     <ImageView
         android:id="@+id/logoImageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="213dp"
         android:layout_marginTop="100dp"
         android:src="@drawable/badge" />
+
+    <ImageButton
+        android:id="@+id/enBtn"
+        android:layout_width="118dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/uk" />
+
+    <ImageButton
+        android:id="@+id/trBtn"
+        android:layout_width="122dp"
+        android:layout_height="98dp"
+        android:layout_marginLeft="171dp"
+        android:layout_toRightOf="@id/enBtn"
+        android:src="@drawable/tr" />
 
     <EditText
         android:id="@+id/usernameEditText"
@@ -18,11 +32,10 @@
         android:layout_below="@id/logoImageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:hint="Username"
+        android:hint="@string/username"
         android:inputType="text"
         android:textSize="18sp"
-        android:textColor="#000000"
-         />
+        android:textColor="#000000" />
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -31,11 +44,9 @@
         android:layout_below="@id/usernameEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
-        android:textSize="18sp"
-       />
-
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/loginButton"
@@ -44,7 +55,7 @@
         android:layout_below="@id/passwordEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:text="Login"
+        android:text="@string/login"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:background="@color/purple" />
@@ -56,7 +67,7 @@
         android:layout_below="@id/loginButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:text="Signup"
+        android:text="@string/signup"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:background="@color/purple" />

@@ -32,7 +32,7 @@ public class MultiplicationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiplication);
 
-        Animation animation= AnimationUtils.loadAnimation(this,R.anim.button_animation);
+
         num1TextView = findViewById(R.id.num1TextView);
         num2TextView = findViewById(R.id.num2TextView);
         resultTextView = findViewById(R.id.resultTextView);
@@ -58,6 +58,7 @@ public class MultiplicationActivity extends AppCompatActivity {
         quitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Animation animation= AnimationUtils.loadAnimation(MultiplicationActivity.this,R.anim.button_animation);
                 quitButton.startAnimation(animation);
                 Intent intent = new Intent(MultiplicationActivity.this, GamesMenu.class);
                 startActivity(intent);
@@ -68,6 +69,7 @@ public class MultiplicationActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                Animation animation= AnimationUtils.loadAnimation(MultiplicationActivity.this,R.anim.button_animation);
                 checkButton.startAnimation(animation);
                 checkAnswer();
             }

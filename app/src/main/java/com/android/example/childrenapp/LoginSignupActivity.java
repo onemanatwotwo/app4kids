@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +32,17 @@ public class LoginSignupActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.passwordEditText);
         loginButton = findViewById(R.id.loginButton);
         signupButton = findViewById(R.id.signupButton);
+        ImageButton en= findViewById(R.id.enBtn);
+        ImageButton tr= findViewById(R.id.trBtn);
+        LanguageManager lang= new LanguageManager(this);
+        en.setOnClickListener(view->{
+            lang.updateResource("en");
+            recreate();
+        });
+        tr.setOnClickListener(view->{
+            lang.updateResource("tr");
+            recreate();
+        });
 
         // Initialize database helper
         databaseHelper = new DatabaseHelper(this);
@@ -40,16 +52,18 @@ public class LoginSignupActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = usernameEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
+                String suc=getResources().getString(R.string.loginsucc);
+                String unsuc=getResources().getString(R.string.loginunsucc);
 
                 if (validateInput(username, password)) {
                     if (loginUser(username, password)) {
                         // User logged in successfully
-                        Toast.makeText(LoginSignupActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginSignupActivity.this, suc, Toast.LENGTH_LONG).show();
                         isLoggedIn = true;
                         navigateToMainMenu();
                     } else {
                         // Invalid login credentials
-                        Toast.makeText(LoginSignupActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginSignupActivity.this, unsuc, Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -60,16 +74,18 @@ public class LoginSignupActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = usernameEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
+                String suc=getResources().getString(R.string.signsucc);
+                String unsuc=getResources().getString(R.string.signunsucc);
 
                 if (validateInput(username, password)) {
                     if (signupUser(username, password)) {
                         // User signed up and logged in successfully
-                        Toast.makeText(LoginSignupActivity.this, "Signup successful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginSignupActivity.this, suc, Toast.LENGTH_LONG).show();
                         isLoggedIn = true;
                         navigateToMainMenu();
                     } else {
                         // Signup failed (username already exists)
-                        Toast.makeText(LoginSignupActivity.this, "Username already exists", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginSignupActivity.this, unsuc, Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -87,7 +103,8 @@ public class LoginSignupActivity extends AppCompatActivity {
     private boolean validateInput(String username, String password) {
         // Perform input validation
         if (username.isEmpty() || password.isEmpty()) {
-            Toast.makeText(LoginSignupActivity.this, "Please enter username and password", Toast.LENGTH_SHORT).show();
+            String suc=getResources().getString(R.string.enteruspas);
+            Toast.makeText(LoginSignupActivity.this, suc, Toast.LENGTH_LONG).show();
             return false;
         }
         return true;

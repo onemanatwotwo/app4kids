@@ -47,14 +47,25 @@
             android:label="Counting Activity">
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Learn"
             android:label="Seasons Learning Activity">
         </activity>
         <activity
             android:name=".MainMenu"
             android:label="Main Menu">
         </activity>
-
+        <activity
+            android:name=".LearnSeasons"
+            android:label="Season Learn Activity">
+        </activity>
+        <activity
+            android:name=".LearnMult"
+            android:label="Mult Learn Activity">
+        </activity>
+        <activity
+            android:name=".LearnDaysMonths"
+            android:label="Days months learn Activity">
+        </activity>
     </application>
 
 </manifest>

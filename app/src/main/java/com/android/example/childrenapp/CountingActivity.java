@@ -10,7 +10,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,33 +20,34 @@ public class CountingActivity extends AppCompatActivity implements View.OnClickL
     private TextView questionTextView;
     private EditText answerEditText;
     private Button submitButton;
+    private TextView answerView;
     private int currentDayIndex;
     private int currentMonthIndex;
     private Random random;
 
-    private boolean askedDayQ=false;
-
+    private boolean askedDayQ = false;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_counting);
-        Animation animation= AnimationUtils.loadAnimation(this,R.anim.button_animation);
+
         questionTextView = findViewById(R.id.questionTextView);
         answerEditText = findViewById(R.id.answerEditText);
         submitButton = findViewById(R.id.submitButton);
+        answerView = findViewById(R.id.answerView);
         submitButton.setOnClickListener(this);
 
         random = new Random();
 
         askQuestion();
-
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.submitButton) {
+
             checkAnswer();
         }
     }
@@ -58,34 +58,34 @@ public class CountingActivity extends AppCompatActivity implements View.OnClickL
 
         if (questionType == 0) {
             askDayQuestion();
-            askedDayQ=true;
+            askedDayQ = true;
         } else {
             askMonthQuestion();
         }
     }
 
     private void askDayQuestion() {
-        Resources res=getResources();
+        Resources res = getResources();
         String[] daysOfWeek = res.getStringArray(R.array.daysOfWeek);
 
         int randomIndex = random.nextInt(daysOfWeek.length);
         String randomDay = "";
-        randomDay=daysOfWeek[randomIndex];
+        randomDay = daysOfWeek[randomIndex];
         questionTextView.setText(R.string.questionDay);
-        questionTextView.append(" "+randomDay+"?");
+        questionTextView.append(" " + randomDay + "?");
         answerEditText.setText("");
         currentDayIndex = randomIndex;
     }
 
     private void askMonthQuestion() {
-        Resources res=getResources();
+        Resources res = getResources();
         String[] monthsOfYear = res.getStringArray(R.array.monthsOfYear);
 
         int randomIndex = random.nextInt(monthsOfYear.length);
         String randomMonth = "";
-        randomMonth=monthsOfYear[randomIndex];
+        randomMonth = monthsOfYear[randomIndex];
         questionTextView.setText(R.string.questionMonth);
-        questionTextView.append(" "+randomMonth+"?");
+        questionTextView.append(" " + randomMonth + "?");
         answerEditText.setText("");
         currentMonthIndex = randomIndex;
     }
@@ -94,7 +94,7 @@ public class CountingActivity extends AppCompatActivity implements View.OnClickL
 
     private void checkAnswer() {
         String userAnswer = answerEditText.getText().toString().trim();
-        Resources res=getResources();
+        Resources res = getResources();
 
         String[] daysOfWeek = res.getStringArray(R.array.daysOfWeek);
 
@@ -105,45 +105,45 @@ public class CountingActivity extends AppCompatActivity implements View.OnClickL
             String correctAnswer = daysOfWeek[nextDayIndex];
 
             if (userAnswer.equalsIgnoreCase(correctAnswer)) {
-                Toast.makeText(this, R.string.correct, Toast.LENGTH_SHORT).show();
-                askedDayQ=false;
+                updateAnswerView(getString(R.string.correct));
+                askedDayQ = false;
                 askQuestion();
                 incorrectAttempts = 0; // Reset incorrect attempts
             } else {
-                String hint = getString(R.string.hintDay) +" "+ daysOfWeek[nextDayIndex].substring(0, 2);
+                String hint = getString(R.string.hintDay) + " " + daysOfWeek[nextDayIndex].substring(0, 2);
                 if (incorrectAttempts == 0) {
-                    Toast.makeText(this, getString(R.string.incorrect) + hint, Toast.LENGTH_SHORT).show();
+                    updateAnswerView(getString(R.string.incorrect) + hint);
                     incorrectAttempts++;
                 } else {
-                    Toast.makeText(this, getString(R.string.incorrect_dayis) + daysOfWeek[nextDayIndex] + ".", Toast.LENGTH_SHORT).show();
-                    askedDayQ=false;
+                    updateAnswerView(getString(R.string.incorrect_dayis) + daysOfWeek[nextDayIndex] + ".");
+                    askedDayQ = false;
                     askQuestion();
                     incorrectAttempts = 0; // Reset incorrect attempts
                 }
             }
-        }
-        else {
+        } else {
             int nextMonthIndex = (currentMonthIndex + 1) % monthsOfYear.length;
             String correctAnswer = monthsOfYear[nextMonthIndex];
 
             if (userAnswer.equalsIgnoreCase(correctAnswer)) {
-                Toast.makeText(this, R.string.correct, Toast.LENGTH_SHORT).show();
+                updateAnswerView(getString(R.string.correct));
                 askQuestion();
                 incorrectAttempts = 0; // Reset incorrect attempts
             } else {
                 String hint = getString(R.string.hintMonth) + monthsOfYear[nextMonthIndex].substring(0, 2);
                 if (incorrectAttempts == 0) {
-                    Toast.makeText(this, getString(R.string.incorrect) + hint, Toast.LENGTH_SHORT).show();
+                    updateAnswerView(getString(R.string.incorrect) + hint);
                     incorrectAttempts++;
-                }
-                else {
-                    Toast.makeText(this, getString(R.string.incorrect_monthis) + monthsOfYear[nextMonthIndex] + ".", Toast.LENGTH_SHORT).show();
+                } else {
+                    updateAnswerView(getString(R.string.incorrect_monthis) + monthsOfYear[nextMonthIndex] + ".");
                     askQuestion();
                     incorrectAttempts = 0; // Reset incorrect attempts
                 }
             }
         }
-
     }
 
+    private void updateAnswerView(String message) {
+        answerView.setText(message);
+    }
 }

@@ -19,7 +19,7 @@
     <string name="correct">Doğru!</string>
     <string name="questionDay">Bu günden sonra hangi gün gelir: </string>
     <string name="questionMonth">Bu aydan sonra hangi ay gelir: </string>
-    <string name="incorrect">"Yanlış "</string>
+    <string name="incorrect">"Yanlış,"</string>
     <string name="incorrect_dayis">Yanlış. Doğru gün şu iki harf ile başlıyor </string>
     <string name="hintDay">İpucu: Aradığımız gün bu harfler ile başlıyor </string>
     <string name="incorrect_monthis">Yanlış. Doğru cevap:</string>
@@ -46,6 +46,21 @@
     <string name="backtomenu">Menüye Dön</string>
     <string name="play">Oyna!</string>
     <string name="learn">Öğren!</string>
+    <string name="username">Kullanıcı Adı</string>
+    <string name="password">Şifre</string>
+    <string name="login">Giriş Yap</string>
+    <string name="signup">Kaydol</string>
+    <string name="loginsucc">Giriş başarılı!</string>
+    <string name="loginunsucc">Yanlış kullanıcı adı ya da şifre</string>
+    <string name="signsucc">Kayıt başarılı!</string>
+    <string name="signunsucc">Kullanıcı adı daha önceden alınmış</string>
+    <string name="enteruspas">Lütfen kullanıcı adı ve şifre girin</string>
+    <string name="summer_learn">Yaz, sıcaklıkların arttığı ve günlerin daha uzun olduğu bir mevsimdir. Bu mevsimde yüzme, dışarıda oyun oynama, piknik yapma ve dondurma yemek gibi etkinliklerden keyif alırız.</string>
+    <string name="winter_learn">Kış, soğuk bir mevsimdir ve kar yağar, karla dışarıda oynayabiliriz. Bu zamanlarda kalın kıyafetler giyer ve Noel ve Yılbaşı gibi tatilleri kutlarız.</string>
+    <string name="spring_learn">İlkbahar, havanın ısınmaya başladığı ve çiçeklerin çıkmaya başladığı bir mevsimdir. Yeni hayatın başladığı bir zaman dilimidir, hayvanlar kış uykusundan uyanır ve dışarıda oyun oynayarak eğlenebiliriz.</string>
+    <string name="autumn_learn">Sonbahar, havanın serinlediği, yaprakların güzel renklere dönüp yere düştüğü bir mevsimdir. Bu mevsimde meyve ve sebzeleri toplamak aynı zamanda yaprak yığınlarında oynamak için harika bir zaman.</string>
+    <string name="daysmonthslearn">Bir takvim, bize o günün hangi gün olduğunu ve etkinliklerimizi planlamamızı sağlar. Günler haftayı oluşturur, mesela Pazar, Pazartesi, Salı, ve benzeri. Haftalar ayları oluşturur ve her ayın bir adı vardır, mesela Ocak, Şubat, Mart, ve benzeri. Aylar yıl boyunca zamanı anlamamıza yardımcı olur. Bir yıl, 12 aydan oluşur ve Dünya\'nın güneş etrafında dönmesinin ne kadar sürdüğünü söyler. Yani takvim; günleri, haftaları, ayları ve yılları takip etmemize yardımcı olur.</string>
+    <string name="multlearn">Çarpım tablosu, çeşitli sayıları birbirleriyle çarparak elde edilen sonuçları gösteren özel bir tablodur. Bir sayıyı başka bir sayıyla çarpmak istediğimizde, çarpım tablosundaki satır ve sütunun kesişim noktasına bakarak cevabı hızlıca bulabiliriz. Bu tablo, çarpma problemlerini daha kolay anlamamıza ve çözmemize yardımcı olan kullanışlı bir araçtır</string>
     <string-array name="daysOfWeek">
         <item>Pazar</item>
         <item>Pazartesi</item>
