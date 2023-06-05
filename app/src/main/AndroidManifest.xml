@@ -18,8 +18,8 @@
             android:label="Games Menu">
         </activity>
         <activity
-            android:name=".MainMenu"
-            android:label="Main Menu"
+            android:name=".LoginSignupActivity"
+            android:label="Login/Signup"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,6 +50,11 @@
             android:name=".MainActivity"
             android:label="Seasons Learning Activity">
         </activity>
+        <activity
+            android:name=".MainMenu"
+            android:label="Main Menu">
+        </activity>
+
     </application>
 
 </manifest>

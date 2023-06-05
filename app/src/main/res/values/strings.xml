@@ -12,7 +12,7 @@
     <string name="spring">Spring</string>
     <string name="summer">Summer</string>
     <string name="correct_guess">Well Done!</string>
-    <string name="incorrect_guess">Incorrect :( Correct one is</string>
+    <string name="incorrect_guess">Incorrect :( Correct one is </string>
     <string name="guess_result">Result</string>
     <string name="ok">ok</string>
     <string name="correct">Correct!</string>
